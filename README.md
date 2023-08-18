@@ -33,9 +33,6 @@ Below image show the whole process of program or application execution.
 
 ![comb](https://github.com/DSatle/RISC-V_ISA/assets/140998466/501ac5d8-3d92-4ca2-af46-53b0c51e315d)
 
-<details>
- <summary> Applications to Hardware
- </summary>
 
 **Applications to Hardware**
 
@@ -50,9 +47,6 @@ Converting assembly language program to machine level program is done using a sp
 
 ![Assembly to Physical implementation](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a7955a90-e355-4abd-8fff-ce3472bdb43e)
 
-<details>
- <summary> Detailed description of detailed of course content.
- </summary>
 
  **Detailed description of detailed of Course content**
  
@@ -69,6 +63,14 @@ The course deals with a elaborative study of the instruction types present in th
 5. Application Binary interface- This is made so that application programmers can access resources of processor like register. Few examples are **a0,SP,s0.**
 
 6. Memory allocation & stack pointer- Transfer of data from memory to registers, stack pointer. Example **ra,24(sp),s0, 16(sp),Sp,32**.
+
+<details>
+ <summary> Labwork for RISC-V software toolchain
+ </summary>
+
+**Labwork for RISC-V software toolchain**
+
+
 
 # Day_2 Introduction to ABI & basic verification flow
 
