@@ -51,10 +51,35 @@ Converting assembly language program to machine level program is done using a sp
 ![Assembly to Physical implementation](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a7955a90-e355-4abd-8fff-ce3472bdb43e)
 
 <details>
- <summary> Applications to Hardware
+ <summary> Detailed description of detailed of course content.
  </summary>
 
  **Detailed description of detailed of Course content**
+ 
+The course deals with a elaborative study of the instruction types present in the RISC-V architeture. Here I have mentioned types of instruction sets present in the RISC-V architecture
+
+1. Pseduo Instuctions- Examples of pseduo instructions are **mv,li,ret**.
+
+2. Base Integer Instructions - The nomenclature for these instructions is **RV64I** here RV stands for RISC-V, 64 stands for 64 bit integer. Few examples of base integer instructions are **lui,addi,jalr,auipc,ld**.
+
+3. Multiply extension- If there is multiply or divide operation needs to be performed on the numbers these instructions are used. Nomencalture for these instructions is RV64M, and if its multiplication or division on base integer than its nomencleture would be RV64Im
+
+4. Single & double precision floating point extension- If add/sub/divide/multiply is performed on the floating point number this instruction set is used. RV64F & RV64D. Few examples are **flw,fadd.s,fcvt.s.s,fmv.x.d,fsd,fmul.s,fdiv.s,fmv.x.d**. A CPU which performs all above operations is termed as RV64IMFD.
+
+5. Application Binary interface- This is made so that application programmers can access resources of processor like register. Few examples are **a0,SP,s0.**
+
+6. Memory allocation & stack pointer- Transfer of data from memory to registers, stack pointer. Example **ra,24(sp),s0, 16(sp),Sp,32**.
+
+# Day_2 Introduction to ABI & basic verification flow
+
+<details>
+ <summary> Application Binary Interface
+ </summary>
+
+**Application Binary interface**
+Introduction to Application binary interface-
+
+
 
  
 
