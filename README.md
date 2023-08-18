@@ -23,7 +23,7 @@ The instruction set is designed for a wide range of uses. The base instruction s
  <summary> Introduction to RISC-V basic keywords
  </summary>
 
-Introduction to RISC-V basic keywords
+**Introduction to RISC-V basic keywords**
 
 Why does a computer needs a RISC or CISC ISA?
 
@@ -43,8 +43,21 @@ Inorder to run any application on the computer system. Below process needs to be
 
 ![Architure](https://github.com/DSatle/RISC-V_ISA/assets/140998466/4660910a-3379-476a-9983-20c82239c277)
 
+Operating system, compiler, assembler all three combined are termed as system software.
+
 The assembly language program is dependent on the processor and its architecture. Every architeture has its own assembly language program.
 Converting assembly language program to machine level program is done using a specific process, which is elaborated in the flowchart below.
+
+![Assembly to Physical implementation](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a7955a90-e355-4abd-8fff-ce3472bdb43e)
+
+<details>
+ <summary> Applications to Hardware
+ </summary>
+
+ **Detailed description of detailed of Course content**
+
+ 
+
 
 
 
