@@ -93,9 +93,10 @@ To get the output of the above program i wrote following commands
   gcc file_name.c
   ./a.out
 ```
-The following I got in when program is run on the system. The image shows the input from the user and the sum of the number done by the system.
+The following I got in when program is run on the system. The image shows the sum first 100 natural numbers 
 
-![6](https://github.com/DSatle/RISC-V_ISA/assets/140998466/555662af-8963-4fb1-a894-d54ca06d1a70)
+![7](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a13a608c-fdec-4e76-9011-08a5d0180b80)
+
 
 **RISC-V GCC compile And Dissemble**
 Here I observed the difference in RISC-V instructions first I used the command 
