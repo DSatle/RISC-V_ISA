@@ -1,3 +1,5 @@
+![4](https://github.com/DSatle/RISC-V_ISA/assets/140998466/4be9c588-d632-41dd-a5d2-a93a6ccbc020)
+![3](https://github.com/DSatle/RISC-V_ISA/assets/140998466/0c7e187c-6420-4050-aa91-46e2f6092f40)
 # RISC-V_ISA
 
 # Introduction to RISC-V ISA and GNU compiler toolchain
@@ -343,7 +345,15 @@ loop:   add      a4, a3, a4 //Incremental addition
 ```
 
 **Simulate New C Program With Function Call**
+Here I run the modified codes of C as well as the assembly langguage. The commands are similar to the ones used before one can observe them in the images below.
 
+![1](https://github.com/DSatle/RISC-V_ISA/assets/140998466/97454088-7c58-427d-aced-5cf2ff6d4546)
+
+![2](https://github.com/DSatle/RISC-V_ISA/assets/140998466/854e0764-ead7-469e-8eaf-a111f08037ba)
+
+![3](https://github.com/DSatle/RISC-V_ISA/assets/140998466/443e1d14-8167-4356-a4d2-154230de0f65)
+
+![4](https://github.com/DSatle/RISC-V_ISA/assets/140998466/989b7773-558d-455c-9ba8-9360a1461fa6)
 
 
 
