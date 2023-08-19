@@ -33,7 +33,7 @@ Below image show the whole process of program or application execution.
 
 ![comb](https://github.com/DSatle/RISC-V_ISA/assets/140998466/501ac5d8-3d92-4ca2-af46-53b0c51e315d)
 
-
+ 
 **Applications to Hardware**
 
 Inorder to run any application on the computer system. Below process needs to be followed.
@@ -70,7 +70,68 @@ The course deals with a elaborative study of the instruction types present in th
 
 **Labwork for RISC-V software toolchain**
 
+C Program to compute sum from 1 to N.
 
+Here I wrote a C program to calculate the sum of n numbers. Input is taken from user. C code for is as follows
+
+ ```
+#include <stdio.h>
+int main()
+{
+    int n,sum=0;
+    printf("Enter n: ");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++)
+    sum =sum+i;
+printf("sum of %d numbers is %d\n",n,sum);
+return 1;
+}
+  ```
+To get the output of the above program i wrote following commands 
+
+```
+  gcc file_name.c
+  ./a.out
+```
+The following I got in when program is run on the system. The image shows the input from the user and the sum of the number done by the system.
+
+![6](https://github.com/DSatle/RISC-V_ISA/assets/140998466/555662af-8963-4fb1-a894-d54ca06d1a70)
+
+**RISC-V GCC compile And Dissemble**
+Here I observed the difference in RISC-V instructions first I used the command 
+```
+/home/divyam/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/risv64-unknown-elf-gcc-O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
+```
+The following assembly level codes list was way too long to filtered the main portion in which we are interested is seen by the following command
+
+```
+riscv64-unknown-elf-objdump -d sum1ton.o | less
+```
+The following instructions were obtained 
+
+![-01 fast less](https://github.com/DSatle/RISC-V_ISA/assets/140998466/cc15dd2f-e3d4-456a-83e6-cda253b051ee)
+
+
+After this I entered the command 
+
+```
+/home/divyam/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/risv64-unknown-elf-gcc -Ofast -ch=rv64i -o sum1ton.o sum1ton.c
+
+```
+Using the less command above mentioned I got the following results
+
+![ofast less](https://github.com/DSatle/RISC-V_ISA/assets/140998466/47a88ccf-8553-410e-b229-9e67a13d3c22)
+
+
+**Spike simulation and debug**
+
+
+
+ 
+
+
+
+  
 
 # Day_2 Introduction to ABI & basic verification flow
 
@@ -79,7 +140,20 @@ The course deals with a elaborative study of the instruction types present in th
  </summary>
 
 **Application Binary interface**
-Introduction to Application binary interface-
+
+Introduction to Application binary interface- The way a user can access a architeture resources through system call is called application binary interface, its also calledsystem call interface. If application programmmer wants to access the hardware resources it is done via registers.
+
+The below image shows the different levels between user and layout. 
+
+![Screenshot (75)](https://github.com/DSatle/RISC-V_ISA/assets/140998466/d08f4b3f-8694-4983-b7f1-c7b3b6509131)
+
+ ![3](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a0d09816-9ab4-4f0e-9f8e-42d96d01d2b5)
+
+   In RISc-V programmer there are 32 registers & width is defined by XLEN.
+  XLEN is 32 bit for RV32
+  XLEN is 64 bit for RV64.
+
+  ![registers](https://github.com/DSatle/RISC-V_ISA/assets/140998466/5abaa9e6-dacb-42a1-93d6-1ebb949448ba)
 
 
 
