@@ -214,6 +214,7 @@ Range for positive & negative numbers is shown below
 **Lab for signed & unsigned numbers**
 
 
+
   
 
 # Day_2 Introduction to ABI & basic verification flow
@@ -240,11 +241,115 @@ The below image shows the different levels between user and layout.
 
 
   **Memory Allocation for Double words**
+
+RISC-V has 32 64-bit registers. There are two ways in which data can be loaded to the register.
+
+1. Direct loading- In this method data is directly loaded to the register. The below image shows the method
+
+![1](https://github.com/DSatle/RISC-V_ISA/assets/140998466/f377ea41-f1c8-4bf1-a019-0e91ee99dbba)
+
+2. Via memory- Since we have limited registers in RISC-V the data is first stored in the memory this data is then transfered to registers. The below image show the method.
+
+![2](https://github.com/DSatle/RISC-V_ISA/assets/140998466/81fad43b-71f7-498b-b975-9579d5a1c9d5)
+
+Little endian method- The RISC-V uses the little endian approach to fill the data in the memory i.e. the data from LSB gets start filling in the memory, from bottom to top respectively. A pictorial presentation of which is shown in the image below.
+
+![4](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a01b147b-8719-4b53-aeeb-22452b2bbf3e)
+
+
+  **Load,Add and Store Instructions with examples**
   
+Here I came to know about the how data is transfered from memory to register and add operation on the data and then transfer of data from register to memory.
+Following commands were used to do the above operations.
+```
+ld x8, 16(x23) // ld stands from load. Initially the pointer is at 0. Since the data is at 16th location the register x23 will go to 16th location and load that 
+                  data to into x8. x8 is destination register and x23 is source register.
+
+add x8, x24,x8  // here the data of x8 and x24 is added and then finally stored in x8.
+
+sd x8, 8(x23)  // here the data from x23 register is stored to the memory location starting from 8.
+
+```
+The whole process discussed above is shown in the below two images.
+
+![4](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a663265a-20cb-4c2c-b378-a637c3d75575)
+
+![8](https://github.com/DSatle/RISC-V_ISA/assets/140998466/e3d22e95-5e3c-4a17-bd26-4524951c9eab)
+
+The above picture also describes which bits are indicate which part of the assembly level language. Every instruction in RISC-V is 32 bit.
+
+  **Concluding 32-registers And their respective ABI names**
+
+There are following type of instructions 
+1. R-type:- These instructions operate on registers.
+  
+2. I-type:- These instructions consists immediate in it and operates on registers.
+
+3. S-type:- Instructions that consists store in it.
+    
+ ![8](https://github.com/DSatle/RISC-V_ISA/assets/140998466/43bf8f6b-f383-4d00-ba79-c679d741f688)
+
+ As we can observe there are 5 bits dedicated for register in the machine level code. As 2^5= 32 this the logic behind having 32 registers in the RISC-V architeture.
+ 
+ The RISC-V instructions are bifurgated in following types shown in the table below.
+
+ ![9](https://github.com/DSatle/RISC-V_ISA/assets/140998466/de382f85-93af-41f2-b5f6-a76247864577)
+
+ <details>
+ <summary> Labwork using ABI function calls
+ </summary>
+  
+**Study New Algorithm For Sum 1 to N using ASM**
+Here we are going to apply the knowledge of instructions which we got familiar in the previous tutorial. Here we are going to push some functionalities from C program to assembly language program. And get fetch the end result from assembly level program to the C program. A pictorial view of the above mention method is shown below.
+
+![basic working](https://github.com/DSatle/RISC-V_ISA/assets/140998466/03942c58-975a-4c6d-8b57-45b8a4e8651c)
+
+To apply this method we are going to follow the below algorithm shown in the picture 
+
+![algorithm](https://github.com/DSatle/RISC-V_ISA/assets/140998466/0385b71f-f191-4281-adeb-b9371623e220)
+
+**Review ASM Function call**
+Here I have modified my C code inorder to implement the method discussed above in the previous section, the modified C code is given below.
+
+```
+#include <stdio.h>
+
+extern int load(int x, int y);
+
+int main ()
+{
+   int result = 0;
+   int count = 9;
+   result = load(0x0, count+1);
+   printf ("Sum of number from 1 to %d is %d\n", count, result);
+   }
+```
+Here I have written assembly level program as well inorder to execute the algorithm the code for which is given below
+
+```
+.section .text
+.global load
+.type load, @function
+
+load: 
+        add      a4, a0, zero //Initialize sum register a4 with 0x0
+        add      a2, a0, a1   //store count of 10 in register a2.Register a1 is loaded with 0xa (decimal 10) from main
+        add      a3, a0, zero //initialize intermediate sum register a3 by 0
+loop:   add      a4, a3, a4 //Incremental addition
+        addi     a3, a3, 1 //Increment intermediate register by 1
+        blt      a3, a2, loop //If a3 is less than a2, branch to label named <loop>
+        add      a0, a4, zero //Store final result to register a0 so that it can be read by main program
+        ret 
+```
+
+**Simulate New C Program With Function Call**
+
+
 
 
 
  
+
 
 
 
