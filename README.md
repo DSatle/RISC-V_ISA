@@ -126,10 +126,92 @@ Using the less command above mentioned I got the following results
 
 **Spike simulation and debug**
 
+To get the same output on RISCV I used the following commands 
+```
+/home/divyam/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/spike pk sum1ton.o
+```
+
+![1](https://github.com/DSatle/RISC-V_ISA/assets/140998466/32bd10ec-3a6b-4de3-9752-c858435462c0)
+
+Now here are the commands which I used to debug the assembly level program 
+```
+/home/divyam/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/spike -d pk sum1ton.o
+```
+Following are the the debug commands I used 
+```
+until pc 0 1000b0 // This indicates start and end address for the commands.
+
+reg 0 a2 // This command is used to check the contents of the register
+
+lui // load upper immediate
+
+q // quit
+
+reg 0 sp // Knowing value stored in Stack Pointer
+
+addi // add immediate 
+```
+Below is the screenshot for the commands used
+
+![2](https://github.com/DSatle/RISC-V_ISA/assets/140998466/98e7321a-d0d1-4d7d-8d5a-fc75105502ee)
+
+Below is a self explanatory image of 64 bit instruction and instruction used in the RISC-V
+
+![3](https://github.com/DSatle/RISC-V_ISA/assets/140998466/2cd96086-bb08-42f2-beb5-d15e2002fa8c)
 
 
+<details>
+ <summary> Integer number representation
+ </summary>
  
+**Integer number representation**
 
+**64-bit Number System For Unsigned numbers**
+Here first of all we will get familiar with few basic terminologies
+
+Double Word:- Entire 64 bit number in processor language is called double word.
+
+Word:- 32 bit number in processor language 
+
+Byte:- Group of 8 bits.
+
+Total no. of pattern that can be formed is = (2^n -1); where n:- number of bits.
+
+RISC-V doubleword can represent "0" to (2^64-1) unsigned numbers. 
+
+The following images shows terminologies range and binary to decimal conversion
+
+![Capture](https://github.com/DSatle/RISC-V_ISA/assets/140998466/8d9c0947-2640-452a-a6c8-23d738686f78)
+
+![range](https://github.com/DSatle/RISC-V_ISA/assets/140998466/3961e697-5815-46c7-bfb2-c115c9c4b8e5)
+
+![Screenshot (76)](https://github.com/DSatle/RISC-V_ISA/assets/140998466/6d85eb28-f442-41db-af75-46585abb88a9)
+
+**64 Number System for Signed Numbers**
+
+For getting negative numbers we use concept of 2's complement which is shown in the image below.
+
+![2's complement](https://github.com/DSatle/RISC-V_ISA/assets/140998466/2f93266b-66dc-4b65-b88d-85d90fbe436f)
+
+
+Here we are devoting MSB for sign representation. 
+
+if MSB =1; number is negative
+if MSB =0; number is positive.
+
+The image below describes the two method to convert negative binary numbers into decimal numbers
+
+![Screenshot (77)](https://github.com/DSatle/RISC-V_ISA/assets/140998466/51ed6bc5-8aaa-4138-a5de-1af084a446c5)
+
+
+Range for positive & negative numbers is shown below
+
+![positive number signed range](https://github.com/DSatle/RISC-V_ISA/assets/140998466/97cd8b15-f273-4a4f-a56f-cbdc1112683d)
+
+
+![range -ve numbers](https://github.com/DSatle/RISC-V_ISA/assets/140998466/c8c0b82d-f007-4b94-b078-ab8174bbb511)
+
+**Lab for signed & unsigned numbers**
 
 
   
@@ -155,6 +237,10 @@ The below image shows the different levels between user and layout.
   XLEN is 64 bit for RV64.
 
   ![registers](https://github.com/DSatle/RISC-V_ISA/assets/140998466/5abaa9e6-dacb-42a1-93d6-1ebb949448ba)
+
+
+  **Memory Allocation for Double words**
+  
 
 
 
