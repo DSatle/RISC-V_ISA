@@ -217,7 +217,7 @@ Range for positive & negative numbers is shown below
 
 
 
-  
+  </details>
 
 # Day_2 Introduction to ABI & basic verification flow
 </details>
@@ -371,6 +371,8 @@ chmod 777 rv32im.sh
 The image below shows the output displayed in ubuntu terminal.
 
 ![11](https://github.com/DSatle/RISC-V_ISA/assets/140998466/234673fb-3b96-4664-8b47-8a2bb4082bdd)
+
+</details>
 
 # Day_3 Digital Logic with TL-verilog & makerchip
 </details>
