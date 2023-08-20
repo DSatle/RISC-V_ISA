@@ -65,6 +65,7 @@ The course deals with a elaborative study of the instruction types present in th
 
 6. Memory allocation & stack pointer- Transfer of data from memory to registers, stack pointer. Example **ra,24(sp),s0, 16(sp),Sp,32**.
 
+</details>
 <details>
  <summary> Labwork for RISC-V software toolchain
  </summary>
