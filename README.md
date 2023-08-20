@@ -161,7 +161,7 @@ Below is a self explanatory image of 64 bit instruction and instruction used in 
 
 ![3](https://github.com/DSatle/RISC-V_ISA/assets/140998466/2cd96086-bb08-42f2-beb5-d15e2002fa8c)
 
-
+</details>
 <details>
  <summary> Integer number representation
  </summary>
@@ -220,7 +220,7 @@ Range for positive & negative numbers is shown below
   
 
 # Day_2 Introduction to ABI & basic verification flow
-
+</details>
 <details>
  <summary> Application Binary Interface
  </summary>
@@ -296,7 +296,8 @@ There are following type of instructions
  The RISC-V instructions are bifurgated in following types shown in the table below.
 
  ![9](https://github.com/DSatle/RISC-V_ISA/assets/140998466/de382f85-93af-41f2-b5f6-a76247864577)
-
+ 
+</details>
  <details>
  <summary> Labwork using ABI function calls
  </summary>
@@ -372,7 +373,7 @@ The image below shows the output displayed in ubuntu terminal.
 ![11](https://github.com/DSatle/RISC-V_ISA/assets/140998466/234673fb-3b96-4664-8b47-8a2bb4082bdd)
 
 # Day_3 Digital Logic with TL-verilog & makerchip
-
+</details>
 <details>
  <summary> Combinational Logic in TL-verilog using Makerchip.
  </summary>
@@ -436,7 +437,7 @@ Mux with vector input
 Combinational Calculator
 
 ![calculator](https://github.com/DSatle/RISC-V_ISA/assets/140998466/b3d745ee-8992-4ef9-9c42-1a3ded4f498c)
-
+</details>
 <details>
  <summary> Sequential Logic
  </summary>
@@ -467,7 +468,7 @@ The basic circuit block diagram is given below
 **Sequential calculator lab**
 
 
-
+</details>
 <details>
  <summary> Pipeline Logic
  </summary>
