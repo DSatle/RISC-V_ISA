@@ -354,6 +354,195 @@ Here I run the modified codes of C as well as the assembly langguage. The comman
 
 ![4](https://github.com/DSatle/RISC-V_ISA/assets/140998466/989b7773-558d-455c-9ba8-9360a1461fa6)
 
+**Lab to run C program on RISC-V CPU**
+
+Here we have a RISC-V CPU written in verilog & we will create a testbench. Then we will read the hex format C program through RISC-V CPU & output will be displayed.The whole process is described below. 
+
+![10](https://github.com/DSatle/RISC-V_ISA/assets/140998466/c7097815-4bed-4020-8d12-1d3ee6280151)
+
+To run the program in the terminal using following commands.
+
+```
+chmod 777 rv32im.sh
+./rv32im..sh
+```
+The image below shows the output displayed in ubuntu terminal.
+
+![11](https://github.com/DSatle/RISC-V_ISA/assets/140998466/234673fb-3b96-4664-8b47-8a2bb4082bdd)
+
+# Day_3 Digital Logic with TL-verilog & makerchip
+
+<details>
+ <summary> Combinational Logic in TL-verilog using Makerchip.
+ </summary>
+
+**Introduction to Logic gates**
+
+Logic gates are the fundamental basic building blocks
+
+![gates](https://github.com/DSatle/RISC-V_ISA/assets/140998466/69098693-8328-4530-af8c-1b69b93c9477)
+
+
+As logic gates are the basic building blocks of a circuit. Here I learned how I can implement the logic gates using TL-verilog. The table below describes respective code for the logic gates.
+
+![Logic gates verilog](https://github.com/DSatle/RISC-V_ISA/assets/140998466/f28afd6a-2279-4499-b608-105b839f511f)
+
+A full adder circuit madeup of logic gates.
+
+![adder](https://github.com/DSatle/RISC-V_ISA/assets/140998466/9512c8ab-5f55-45dc-a1af-3a0ccc4ecc7c)
+
+A adder circuit made using logic gates.
+
+![carr](https://github.com/DSatle/RISC-V_ISA/assets/140998466/36706a16-736b-42d6-bc12-04d334e360d0)
+
+**Basic Mux implementation & Introduction to makerchip**
+
+Basic mux 2x1 is made using the following commands, here we are using ternary operator which is similar to if statement in C program.
+
+```
+assign f = s ? x1 : x2;
+```
+
+![2x1 mux](https://github.com/DSatle/RISC-V_ISA/assets/140998466/bc71ba8e-f9b5-421a-b059-562b21cad1c1)
+
+The below image shows the 4x1 mux implemented using 2x1 mux and verilog code for that as well
+
+![4x1 mux](https://github.com/DSatle/RISC-V_ISA/assets/140998466/309613c3-c49c-4802-9915-ab6232ed4024)
+
+Introduction to makerchip
+
+1. Type maker chip in tab of your search engine & launch Makerchip IDE.
+2. Go to Learn, click on Examples and select FPGA multipler.
+
+![MakerChip tutorial](https://github.com/DSatle/RISC-V_ISA/assets/140998466/bbdafb04-4dda-4251-b153-5c53daacc280)
+
+Inverter Gate on makerchip
+
+![Inverter](https://github.com/DSatle/RISC-V_ISA/assets/140998466/87b47c86-9ba2-4700-860d-293ce1714d94)
+
+Vector of 5 bits
+
+![vector](https://github.com/DSatle/RISC-V_ISA/assets/140998466/8852e1e5-f21b-4a76-a1a0-596a2cbc9303)
+
+Mux with single bit 
+
+![mux made me](https://github.com/DSatle/RISC-V_ISA/assets/140998466/0a946c60-5e10-414b-8e44-eef042a7f5e4)
+
+Mux with vector input
+
+![mux vector](https://github.com/DSatle/RISC-V_ISA/assets/140998466/7c25157d-cec2-475a-8651-0dc5752fa589)
+
+Combinational Calculator
+
+![calculator](https://github.com/DSatle/RISC-V_ISA/assets/140998466/b3d745ee-8992-4ef9-9c42-1a3ded4f498c)
+
+<details>
+ <summary> Sequential Logic
+ </summary>
+ 
+**Introduction to sequntial logic & counter lab**
+
+Sequential Circuit essentially consists a clock over combinational circuit. The value transition takes place on either positive or negative edge of the clock.
+The below image describes the basic idea of sequential circuit.
+
+![basic seq  circuit](https://github.com/DSatle/RISC-V_ISA/assets/140998466/c2c859fd-c5c2-4449-be8b-2eec869705f2)
+
+Fibonacci Series 
+
+The below image gives an idea how the circuit for performing Fibonacci series is implemented.
+
+![Uploading fibbonacci series ckt and waveform.png…]()
+
+Free Running counter 
+
+The below image show code and working of a free running counter designed using sequential circuit, one can observe the importance of clock in the circuit as the output changes only for positive clock.
+
+![Counter circuit](https://github.com/DSatle/RISC-V_ISA/assets/140998466/0032964a-c017-417d-9aa3-dc2fb5b82bb9)
+
+The basic circuit block diagram is given below
+
+![count ckt](https://github.com/DSatle/RISC-V_ISA/assets/140998466/cc25d985-e178-4b86-830c-27d0bd4209a0)
+
+**Sequential calculator lab**
+
+
+
+<details>
+ <summary> Pipeline Logic
+ </summary>
+
+**Pipelined logic & retiming**
+
+The concept of pipeling is explained using the Pythagoras theorem.
+
+Basics of pythagoras theorem
+
+![pytha basic](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a5ccfe1b-1c8e-409e-abbf-997ace169f41)
+
+Pythagoras theorem using pipelinig
+
+![basic idea of pipelining](https://github.com/DSatle/RISC-V_ISA/assets/140998466/37ec6d76-8423-43c9-9bdc-240c885811b9)
+
+TL-verilog gives the ability to model the process in timing abstract representation. The basic idea of pipelining is to break the whole process in different stages. The below image shows the use of pipelining concept in TL-verilog compared to other RTL languages.
+
+![rtl vs tl-verilog](https://github.com/DSatle/RISC-V_ISA/assets/140998466/f44d8c55-edf8-4a11-8981-79a0fd9b24d2)
+
+Timing abstract gives the advantage to manipulate pipelining & its stages. i.e staging is a physical attribute it has no impact on behaviour as shown in the below image
+
+![remtiming ](https://github.com/DSatle/RISC-V_ISA/assets/140998466/d9d72d65-36dd-46f0-ae37-5c13a39ac062
+
+The below image show the code for pipelining in TL-verilog.
+
+![tl verilog code](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ff95517b-f066-4b1f-b7e2-38ec95bbce57)
+
+Image shows comparison of code between system verilog and TL-verilog.
+
+![s vl vs tlvl](https://github.com/DSatle/RISC-V_ISA/assets/140998466/f9d7d47e-b40f-48e4-a5ab-e07db0721a36)
+
+**Pipeline logic advantages and demo in platform**
+
+1. By applying pipelining we are able to run our clock at higher speed.
+2. In diagram 2, one can observe that we can introduce new input at every clock cycle. So we can introduce more inputs using pipeline.
+
+![basic idea of pipelining](https://github.com/DSatle/RISC-V_ISA/assets/140998466/888ebeae-1036-4ed8-9268-88f0f47d08dd)
+
+Here we will understand the minute details of pipelining concept.
+
+Here in the below image one can observe that there is single stage pipeline, so the output for C comes at the same stage.
+
+![pytha single pipeline](https://github.com/DSatle/RISC-V_ISA/assets/140998466/44147a9e-4e59-4a9a-a8ad-ff8138d73017)
+
+Now when we change the single stage pipeline to 3 stage pipeline, now the output C comes 2 stage later than a & b. This can be observed in the below image.
+
+![pipelining pytha 3step](https://github.com/DSatle/RISC-V_ISA/assets/140998466/56f686fd-237c-4b5f-b5fc-50ee4d6f044d)
+
+At last here we are seeing the concept of feedback how varying the no. of feedback stages in code gets reflected in the diagram of pipeline. Here in the code we have set the code for 4 stage feedback which can be observed in the diagram as well.
+
+![feedback concept](https://github.com/DSatle/RISC-V_ISA/assets/140998466/11d373c7-3f7e-4a32-8f7a-191336183ad9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
