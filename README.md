@@ -574,7 +574,8 @@ TL-verilog gives the ability to model the process in timing abstract representat
 
 Timing abstract gives the advantage to manipulate pipelining & its stages. i.e staging is a physical attribute it has no impact on behaviour as shown in the below image
 
-![remtiming ](https://github.com/DSatle/RISC-V_ISA/assets/140998466/d9d72d65-36dd-46f0-ae37-5c13a39ac062
+![remtiming ](https://github.com/DSatle/RISC-V_ISA/assets/140998466/aaa1ce9e-a09f-4f6f-8f72-d4401ad36892)
+
 
 The below image show the code for pipelining in TL-verilog.
 
@@ -667,10 +668,15 @@ The following picture shows the output
 
 **Introduction to hiearchy Concept**
 
+</details>
 
+# Day_4 Basic RISC-V CPU Archituecture
 
-**Day-3 Closer**
-
+</details>
+<details>
+ <summary> Introduction to Simple RISC-V Microarchiteture
+ </summary>
+** 
 
 
 
