@@ -560,13 +560,9 @@ The basic circuit block diagram is given below
 
 The concept of pipeling is explained using the Pythagoras theorem.
 
-Basics of pythagoras theorem
+Basics of pythagoras theorem on makerchip
 
-![pytha basic](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a5ccfe1b-1c8e-409e-abbf-997ace169f41)
-
-Pythagoras theorem using pipelinig
-
-![basic idea of pipelining](https://github.com/DSatle/RISC-V_ISA/assets/140998466/37ec6d76-8423-43c9-9bdc-240c885811b9)
+![pytha](https://github.com/DSatle/RISC-V_ISA/assets/140998466/d696a4d0-2d07-4908-a151-869fa08781a6)
 
 TL-verilog gives the ability to model the process in timing abstract representation. The basic idea of pipelining is to break the whole process in different stages. The below image shows the use of pipelining concept in TL-verilog compared to other RTL languages.
 
