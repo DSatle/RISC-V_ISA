@@ -214,7 +214,87 @@ Range for positive & negative numbers is shown below
 ![range -ve numbers](https://github.com/DSatle/RISC-V_ISA/assets/140998466/c8c0b82d-f007-4b94-b078-ab8174bbb511)
 
 **Lab for signed & unsigned numbers**
+Here we will look at the range of unsigned and signed numbers.
 
+Following is the code for highest unsigned number
+
+```
+#include <stdio.h>
+#include <math.h>
+
+int main ()
+{ unsigned long long int max = (unsigned long long int) (pow(2,64) - 1);
+  printf("highest number represented by unsigned long long int is %llu\n", max);
+  return 0;
+  }
+```
+
+To run the command I used following commands in the terminal
+```
+ /home/divyam/riscv_toolchain/riscv64-unknown-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o unsigned.o unsigned.c
+
+ /home/divyam/riscv_toolchain/riscv64-unknown-2019.08.0-x86_64-linux-ubuntu14/bin/spike pk unsigned.o
+
+ ```
+One can observe the output in the below image
+
+![signed highest](https://github.com/DSatle/RISC-V_ISA/assets/140998466/c65e50a7-241a-4840-87ac-de2a2cb5edc3)
+
+For getting the lowest negative number following C code was used
+
+```
+#include <stdio.h>
+#include <math.h>
+
+int main ()
+{  long long int max = ( long long int) (pow(2,64) * - 1);
+  printf("highest number represented by  long long int is %lld\n", max);
+  return 0;
+  }
+```
+To run the above code following commands were used 
+
+```
+ /home/divyam/riscv_toolchain/riscv64-unknown-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o signed.o signed.c
+
+ /home/divyam/riscv_toolchain/riscv64-unknown-2019.08.0-x86_64-linux-ubuntu14/bin/spike pk signed.o
+
+ ```
+The below image shows the output obtained 
+
+![lowest](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ac9daf71-e20c-4c29-a5d1-f345f7b3cfea)
+
+Now we will look at the range of least negative and highest positive number, code for which is given below
+
+```
+#include <stdio.h>
+#include <math.h>
+int main() {
+long long int max = (int) (pow(2,63) -1);
+long long int min = (int) (pow(2,63) * -1);
+printf("highest number represented by long long int is %lld\n", max);
+printf("lowest number represented by long long int is %lld\n", min);
+return 0;
+```
+Here we can see the range is not correct.
+ 
+![both](https://github.com/DSatle/RISC-V_ISA/assets/140998466/7390fe59-a273-4053-b7c7-5853229f7e1c)
+
+The correct code and output is given below 
+```
+#include <stdio.h>
+#include <math.h>
+int main() {
+long long int max = (long long int) (pow(2,63) -1);
+long long int min = (long long int) (pow(2,63) * -1);
+
+printf("highest number represented by long long int is %lld\n", max);
+printf("lowest number represented by long long int is %lld\n", min);
+return 0;
+}
+```
+
+![both_modify](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ed2f25bd-5dd4-4e01-af71-9353ca2e72ab)
 
 
   </details>
@@ -523,6 +603,10 @@ Now when we change the single stage pipeline to 3 stage pipeline, now the output
 At last here we are seeing the concept of feedback how varying the no. of feedback stages in code gets reflected in the diagram of pipeline. Here in the code we have set the code for 4 stage feedback which can be observed in the diagram as well.
 
 ![feedback concept](https://github.com/DSatle/RISC-V_ISA/assets/140998466/11d373c7-3f7e-4a32-8f7a-191336183ad9)
+
+**Lab on Error Conditions within Computation Pipeline**
+
+Classification 
 
 
 
