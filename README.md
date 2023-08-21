@@ -535,7 +535,8 @@ Fibonacci Series
 
 The below image gives an idea how the circuit for performing Fibonacci series is implemented.
 
-![Uploading fibbonacci series ckt and waveform.png…]()
+![fibbonacci series ckt and waveform](https://github.com/DSatle/RISC-V_ISA/assets/140998466/731ab09b-e976-42e8-b0e1-77bda3d443dd)
+
 
 Free Running counter 
 
@@ -606,11 +607,69 @@ At last here we are seeing the concept of feedback how varying the no. of feedba
 
 **Lab on Error Conditions within Computation Pipeline**
 
-Classification 
+**Classification** 
+
+**Pipe Signal**- All the instuctions are written in lower case. e.g.-$lower_case
+
+**Pascal case/State Signal** - In this the first letter of both terms is written in upper case. eg.- $CamelCase
+
+**Keyword Signal** - All the letters in the instructions are written in upper case. e.g.- $UPPER_CASE.
+
+**Numbers end tokens** - $base64_value-- This was is considered as a good practice in TL-Verilog.
+                         $bad_name_5 -- This is avoidable practice in TL--Verilog
+
+ **Numeric identifiers**- e.g. >>1 this instruction indicates ahead by 1.
+
+ For pipelining of error I used following code in makerchip
+
+ ```
+ $reset = *reset;
+   |comp 
+      @1
+         $err1 = $bad_input || $illegal_op;
+      @2 
+         $err2 = $err1 || $overflow;
+      @3
+         $err3 = $err2 || $div_by_zero;
+
+```
+
+The following picture shows the output
+
+![error ip](https://github.com/DSatle/RISC-V_ISA/assets/140998466/884d951c-c137-428d-abe4-adcf19737b71)
+
+![asked](https://github.com/DSatle/RISC-V_ISA/assets/140998466/60789cd3-2250-4440-a37e-40f234721e5c)
+
+
+**Lab on 2-Cycle Calculator**
 
 
 
+</details>
+<details>
+ <summary> Validity
+ </summary>
 
+**Introduction to validity & it's advantages**
+
+**Lab on Validity & Valid When Condition**
+
+**Lab to compute Total Distance**
+
+**Lab on 2-Cycle Calculator with Validity**
+
+**Calculator Single Value Memory Lab**
+
+</details>
+<details>
+ <summary> Wrap-UP
+ </summary>
+
+**Introduction to hiearchy Concept**
+
+
+
+**Day-3 Closer**
 
 
 
