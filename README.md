@@ -550,6 +550,8 @@ The basic circuit block diagram is given below
 
 **Sequential calculator lab**
 
+![seq  calculator](https://github.com/DSatle/RISC-V_ISA/assets/140998466/36422d30-878d-40e9-bb3b-8ea79f8dd89c)
+
 
 </details>
 <details>
@@ -640,6 +642,11 @@ The following picture shows the output
 
 **Lab on 2-Cycle Calculator**
 
+Value Representation in Verilog 
+
+The below image show how numbers are represnted in verilog.
+
+![value representation](https://github.com/DSatle/RISC-V_ISA/assets/140998466/5fb0597c-cba2-4209-8a23-5fa6400aae42)
 
 
 </details>
