@@ -842,6 +842,117 @@ The makerchip implementation output:
 
 **LAB - ALU**
 
+The pipeline structure 
+
+![22](https://github.com/DSatle/RISC-V_ISA/assets/140998466/503e4cfa-970c-4f45-9229-1f27d58b27fe)
+
+The implementation output
+
+![22](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ab56f695-f021-4131-b0a0-7fc420f62be6)
+
+LAB - REGISTER FILE WRITE
+
+![23](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ea2db25a-2f23-4555-b03a-c064bec42e23)
+
+The makerchip implementation output:
+
+![24](https://github.com/DSatle/RISC-V_ISA/assets/140998466/a36942dc-59d6-4549-9804-f3bbd41c6be0)
+
+**Arrays**
+
+![25](https://github.com/DSatle/RISC-V_ISA/assets/140998466/cddec658-00e2-40fa-b695-bb19c539e524)
+
+The detailed implementation of Register files is given below:
+
+![26](https://github.com/DSatle/RISC-V_ISA/assets/140998466/8b928844-96a4-4f38-93ee-a18b15ab6175)
+
+The implementation output:
+
+![27](https://github.com/DSatle/RISC-V_ISA/assets/140998466/b8b88886-8093-4983-af58-3b3c78ad64b9)
+
+![28](https://github.com/DSatle/RISC-V_ISA/assets/140998466/7a88a029-1c6e-4e35-97dd-887953a4a998)
+
+The output is shown in the image below
+
+![30](https://github.com/DSatle/RISC-V_ISA/assets/140998466/85159322-825b-441e-811f-160083fe1c0f)
+
+**LAB- Test bench**
+
+The makerchip implementation output is as shown below:-
+
+![31](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ae2b468b-758e-45b9-abd3-699671420e7c)
+
+</details>
+
+## Day_5 Complete Pipelined RISC-V CPU micro-architecture
+
+</details>
+<details>
+ <summary> Pipelining the CPU
+ </summary>
+
+![1](https://github.com/DSatle/RISC-V_ISA/assets/140998466/9099d51f-0b19-4cd4-a710-8aac61f78686)
+
+**LAB - 3-CYCLE VALID SIGNAL**
+
+The implementation output is:
+
+![2](https://github.com/DSatle/RISC-V_ISA/assets/140998466/62a9e575-5f2a-4f88-9d71-8096672111fd)
+
+**LAB - CYCLE RISC-V**
+
+![3](https://github.com/DSatle/RISC-V_ISA/assets/140998466/adc22d70-cba5-46eb-bbcb-ae3345147847)
+
+The implementation output is shown below
+
+![4](https://github.com/DSatle/RISC-V_ISA/assets/140998466/d04d6e72-68fe-4552-94d1-96eacd8e957d)
+
+</details>
+
+
+</details>
+<details>
+ <summary> Solutions to Pipeline Hazards
+ </summary>
+
+ **REGISTER FILE BYPASS**
+
+ The pipeline structure is as follows
+
+![5](https://github.com/DSatle/RISC-V_ISA/assets/140998466/361b1a20-7642-4f94-9545-89dcef490a3f)
+
+The implementation output is shown below in the image
+
+![6](https://github.com/DSatle/RISC-V_ISA/assets/140998466/062d231a-756e-4666-82dd-dd7768732ad9)
+
+**LAB - BRANCHES**
+
+![7](https://github.com/DSatle/RISC-V_ISA/assets/140998466/3e0c2099-ced7-40f7-874f-d0cdc9ed2dc1)
+
+The implemented output is shown below
+
+![8](https://github.com/DSatle/RISC-V_ISA/assets/140998466/cf22e9d1-1612-41ec-8dec-7a12b88f3494)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
