@@ -944,7 +944,7 @@ The makerchip implementation results are:
 
 </details>
 <details>
- <summary> Solutions to Pipeline Hazards
+ <summary> Load/Store Instructions and Completing RISC-V CPU
  </summary>
 
 **LOAD**
@@ -1260,11 +1260,11 @@ I am thankful to Kunal Ghosh ( cofounder & CEO VSD) for providing me good qualit
 
 **References**
 
- 1.https://www.vsdiat.com
+1. https://www.vsdiat.com
 
- 2.https://github.com/stevehoover/RISC-V_MYTH_Workshop
+2. https://github.com/stevehoover/RISC-V_MYTH_Workshop
 
- 3.http://makerchip.com/sandbox/
+3. http://makerchip.com/sandbox/
 
 4. https://github.com/kunalg123/riscv_workshop_collaterals
 
