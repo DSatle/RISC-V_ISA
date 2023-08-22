@@ -666,14 +666,74 @@ The below image show how numbers are represnted in verilog.
 
 </details>
 <details>
- <summary> Wrap-UP
+ <summary> Validity
  </summary>
 
-**Introduction to hiearchy Concept**
+**Validity** is a notion for when the values or the signals are meaningful.
+Validity provides
+
+* Easier Debug 
+* Cleaner Design
+* Better error checking
+* Automated Clock gating
+
+Let us implement the Pythagoran's theorem with validity:
+
+![validity pythagoran](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ecebb6f8-6333-4115-abcc-b8c5205536ff)
+
+**Clock Gating** is a power-saving property.
+* Motivation
+  1.1 Clock signals are distributed to EVERY flipflop.
+  1.2 Clocks toggle twice per cycle.
+  1.3 This consumes power.
+* Clock gating avoids toggling clock signals.
+* TL-verilog can produce fine-grained gating (or enables).
+
+**LAB**- Distance Accumulator with Pythagoran's theorem.
+
+![validity pythagoran](https://github.com/DSatle/RISC-V_ISA/assets/140998466/5ad3408c-1102-4397-8606-c0aef83e6aed)
+
+**LAB**- Cycle calculator with Validity
+The pipeline structure is 
+
+![validity pythagoran](https://github.com/DSatle/RISC-V_ISA/assets/140998466/db01e1ce-d7c6-4488-9a3d-8d97f31d926a)
+
+The makerchip implementation output:
+
+![cycle calculator makerchip](https://github.com/DSatle/RISC-V_ISA/assets/140998466/e3162aca-92dd-4b68-b182-b38e95d01777)
+
+**LAB**- Calculator with single value Memory
+
+The pipeline str. is as follows
+
+![single memory strc](https://github.com/DSatle/RISC-V_ISA/assets/140998466/68a3888c-def0-42e6-8c0b-f7bceda3e13f)
+
+Makerchip Implementation
+
+![single memory strc](https://github.com/DSatle/RISC-V_ISA/assets/140998466/7150e820-dd69-4703-9b95-88bb25ebdc73)
 
 </details>
 
-# Day_4 Basic RISC-V CPU Archituecture
+</details>
+<details>
+ <summary> Wrap-UP
+ </summary>
+
+**LAB** - conway's game of life:
+
+![Conway game of life](https://github.com/DSatle/RISC-V_ISA/assets/140998466/3563e237-7e44-4d64-910b-36be9088c836)
+
+**LAB** - Pythagoran's theorem:
+
+![pytha str](https://github.com/DSatle/RISC-V_ISA/assets/140998466/3d2ff0af-2021-43cf-baa5-f13a9dfd058c)
+
+The makerchip output:
+
+![makerchip implementation](https://github.com/DSatle/RISC-V_ISA/assets/140998466/4d050a11-f0cd-4b74-b4d2-8c46d3e991ba)
+
+</details>
+
+## Day_4 Basic RISC-V CPU Archituecture
 
 </details>
 <details>
