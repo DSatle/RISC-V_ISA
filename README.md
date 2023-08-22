@@ -650,19 +650,6 @@ The below image show how numbers are represnted in verilog.
 
 
 </details>
-<details>
- <summary> Validity
- </summary>
-
-**Introduction to validity & it's advantages**
-
-**Lab on Validity & Valid When Condition**
-
-**Lab to compute Total Distance**
-
-**Lab on 2-Cycle Calculator with Validity**
-
-**Calculator Single Value Memory Lab**
 
 </details>
 <details>
