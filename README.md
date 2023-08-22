@@ -683,10 +683,15 @@ Let us implement the Pythagoran's theorem with validity:
 
 **Clock Gating** is a power-saving property.
 * Motivation
+  
   1.1 Clock signals are distributed to EVERY flipflop.
+  
   1.2 Clocks toggle twice per cycle.
+  
   1.3 This consumes power.
+  
 * Clock gating avoids toggling clock signals.
+* 
 * TL-verilog can produce fine-grained gating (or enables).
 
 **LAB**- Distance Accumulator with Pythagoran's theorem.
