@@ -1,4 +1,4 @@
-
+![image](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ed4aa9c5-fb14-440b-88d3-290462604226)
 # RISC-V_ISA
 
 # Introduction to RISC-V ISA and GNU compiler toolchain
@@ -731,8 +731,139 @@ The makerchip output:
 <details>
  <summary> Introduction to Simple RISC-V Microarchiteture
  </summary>
-** 
+ 
+The micro architecture for the RISC-V implementation is shown here:
 
+![1](https://github.com/DSatle/RISC-V_ISA/assets/140998466/15b5cf57-5aee-49de-b313-25fc59535fa9)
+
+
+**Basic terminologies**
+
+**Program counter** - The Program counter is a pointer to the instruction memory as to which instrcution must be executed next.
+
+**Decoder** - The Decoder interprets the instruction and send signals regarding the action of the processor and the location of data. The decoder also sends incremented by 1 value to the PC, instructing it to move to the next instruction.
+
+**Register Files** - These implements the read and write operations on the data/memory.
+
+**ALU** - ALU computes the arithmetic operations and write the result back to the register file.
+
+</details>
+
+</details>
+<details>
+ <summary> Fetch & Decode 
+ </summary>
+
+ 
+ The implementation plan of RISC-V CPU Core:
+
+ ![2](https://github.com/DSatle/RISC-V_ISA/assets/140998466/c18e68da-5e00-43ee-9463-221273d6e1f6)
+
+
+ **LAB - PC:**
+
+ The implementation pipeline
+
+ ![3](https://github.com/DSatle/RISC-V_ISA/assets/140998466/74b74393-a07e-4f3a-b3ae-07e9c673bd7c)
+
+ The makerchip output 
+
+ ![4](https://github.com/DSatle/RISC-V_ISA/assets/140998466/9143eaf8-2d7c-449a-812d-49f5dce2c160)
+
+ **LAB - FETCH**
+The pipeline structure(part-1):
+
+![6](https://github.com/DSatle/RISC-V_ISA/assets/140998466/058f581b-2b55-4d59-a6f2-41c971a4487d)
+
+The pipeline structure(part-2): 
+
+![7](https://github.com/DSatle/RISC-V_ISA/assets/140998466/8bef874e-b466-4ac1-9346-3e3f842d1007)
+
+The makerchip implementation output:
+
+![8](https://github.com/DSatle/RISC-V_ISA/assets/140998466/f5453a39-1891-4f12-84a8-896f383846fe)
+
+**LAB - INSTRUCTION TYPE DECODE**
+
+The Pipeline Structure 
+
+![9](https://github.com/DSatle/RISC-V_ISA/assets/140998466/e89f7b44-11cd-42a4-9ca5-6a3f6376de1e)
+
+The makechip output 
+
+![10](https://github.com/DSatle/RISC-V_ISA/assets/140998466/d19e50ee-4613-44a4-a27d-6a3b35754f1e)
+
+**LAB - INSTRUCTION IMMEDIATE DECODE**
+
+![11](https://github.com/DSatle/RISC-V_ISA/assets/140998466/e1d4ad68-0a27-4786-b46b-48f9da516a95)
+
+The implementation output:
+
+![12](https://github.com/DSatle/RISC-V_ISA/assets/140998466/f42a0d27-6830-44f4-93f3-74d9cc45f125)
+
+**LAB - INSTRUCTION FIELD DECODE**
+
+![13](https://github.com/DSatle/RISC-V_ISA/assets/140998466/7974f6be-ed46-4145-aecf-b7a36ecf0983)
+
+The implementation output:
+
+![14](https://github.com/DSatle/RISC-V_ISA/assets/140998466/04ab3039-751e-4799-aeb8-40e84431fbe9)
+
+**LAB - INSTRUCTION DECODE_2**
+
+![15](https://github.com/DSatle/RISC-V_ISA/assets/140998466/3d608530-9f4b-47f4-bb56-525a7816fe0a)
+
+The implementation output:
+
+![16](https://github.com/DSatle/RISC-V_ISA/assets/140998466/c62fb75a-f8cb-4a5e-902f-3059fbe89a56)
+
+</details>
+<details>
+ <summary> RISC-V control logic
+ </summary>
+
+ **LAB - REGISTER FILE READ_1**
+
+The pipeline structure is as follows
+
+ ![17](https://github.com/DSatle/RISC-V_ISA/assets/140998466/30da51b2-27d1-4399-bf94-e3fda75c41fa)
+
+![18](https://github.com/DSatle/RISC-V_ISA/assets/140998466/93e145f2-371e-4538-b4ae-6edf26d78a3a)
+
+**LAB - REGISTER FILE READ_2**
+
+The pipeline structure:
+
+![19](https://github.com/DSatle/RISC-V_ISA/assets/140998466/dda3e0bf-d434-442c-a7af-8271871331a7)
+
+The makerchip implementation output:
+
+![20](https://github.com/DSatle/RISC-V_ISA/assets/140998466/80408f05-8c78-4bcb-80aa-d5646d692160)
+
+**LAB - ALU**
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
 
 
 
