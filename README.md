@@ -1,4 +1,4 @@
-![image](https://github.com/DSatle/RISC-V_ISA/assets/140998466/ed4aa9c5-fb14-440b-88d3-290462604226)
+
 # RISC-V_ISA
 
 # Introduction to RISC-V ISA and GNU compiler toolchain
