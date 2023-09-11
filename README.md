@@ -982,7 +982,7 @@ The RISC-V final code is shown below:
 \SV
    // This code can be found in: https://github.com/stevehoover/RISC-V_MYTH_Workshop
    
-   m4_include_lib(['https://raw.githubusercontent.com/Lasya-G/Risc_V/main/risc-v_shell_lib.tlv'])
+   m4_include_lib(['https://raw.githubusercontent.com/Dsatle/Risc_V/main/risc-v_shell_lib.tlv'])
 
 \SV
    m4_makerchip_module   // (Expanded in Nav-TLV pane.)
